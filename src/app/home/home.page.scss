@@ -2,6 +2,11 @@
   background-color: #f0f0f0; /* fondo claro */
   min-height: 100%;
 }
+
+ion-content {
+  --padding-bottom: calc(80px + env(safe-area-inset-bottom));
+}
+
 /**ion-item::part(native) {
   //WRITE ALL YOUR CSS RULES HERE
   padding-left: unset;
@@ -35,4 +40,7 @@ ion-label p {
 ion-button {
   --padding-start: 15px;
   --padding-end: 15px;
+}
+ion-content {
+  margin-bottom: 2rem;
 }

@@ -37,6 +37,9 @@
         <h2>{{ pelicula.nombre }}</h2>
         <p>{{ pelicula.fecha?.toDate?.() | date:'dd-MM-yy' }}</p>
       </ion-label>
+      <ion-button (click)="pelicula.id && borrarPelicula(pelicula.id)">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
     </ion-item>
   </ion-list>
 

@@ -2,9 +2,12 @@ import { Injectable } from '@angular/core';
 import {
   Firestore,
   collection,
+  doc,
   addDoc,
+  deleteDoc,
   collectionData,
-  DocumentData,
+  query,
+  orderBy,
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Pelicula } from '../interfaces/pelicula';
@@ -28,8 +31,21 @@ export class PeliculasService {
     }
   }
 
+  async deletePelicula(id: string) {
+    const docPelicula = doc(this.firestore, `peliculas/${id}`);
+    try {
+      const docRef = deleteDoc(docPelicula);
+      console.log('Borrada');
+    } catch (err: unknown) {
+      console.error('Error Borrando', err);
+    }
+  }
+
   getPeliculas(): Observable<Pelicula[]> {
-    const coleccionPeliculas = collection(this.firestore, 'peliculas');
+    const coleccionPeliculas = query(
+      collection(this.firestore, 'peliculas'),
+      orderBy('nombre', 'desc'),
+    );
     return collectionData(coleccionPeliculas, { idField: 'id' }) as Observable<
       Pelicula[]
     >;
