@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Mis Películas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding home-content">
+  <!-- Formulario para agregar película -->
+  <ion-card>
+    <ion-card-content>
+      <ion-input
+        class="pelicula-input"
+        label="Nombre de la película"
+        labelPlacement="floating"
+        [(ngModel)]="nombre"
+      >
+      </ion-input>
+      <ion-button
+        slot="end"
+        class="ion-top-margin ion-bottom-margin"
+        expand="block"
+        (click)="agregarPelicula()"
+      >
+        Agregar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Lista de películas -->
+  <ion-list *ngIf="(peliculas$ | async)?.length; else noPeliculas">
+    <ion-item
+      *ngFor="let pelicula of peliculas$ | async"
+      class="pelicula-item"
+      lines="full"
+    >
+      <ion-label>
+        <h2>{{ pelicula.nombre }}</h2>
+        <p>{{ pelicula.fecha?.toDate?.() | date:'dd-MM-yy' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Mensaje si no hay películas -->
+  <ng-template #noPeliculas>
+    <div class="ion-text-center ion-padding">
+      <p>No hay películas guardadas.</p>
+    </div>
+  </ng-template>
+</ion-content>

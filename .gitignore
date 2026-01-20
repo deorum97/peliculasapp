@@ -1,106 +1,72 @@
-# Created by https://www.toptal.com/developers/gitignore/api/angular,android,ionic3
-# Edit at https://www.toptal.com/developers/gitignore?templates=angular,android,ionic3
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
 
-### Android ###
-# Gradle files
-.gradle/
-build/
-
-# Local configuration file (sdk path, etc)
-local.properties
-
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output.json
-
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
-# Keystore files
-*.jks
-*.keystore
-
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
-*.hprof
-
-### Android Patch ###
-gen-external-apklibs
-
-# Replacement of .externalNativeBuild directories introduced
-# with Android Studio 3.5.
-
-### Angular ###
-## Angular ##
-# compiled output
-dist/
-tmp/
-app/**/*.js
-app/**/*.js.map
-
-# dependencies
-node_modules/
-bower_components/
-
-# IDEs and editors
-
-# misc
-.sass-cache/
-connect.lock/
-coverage/
-libpeerconnection.log/
-npm-debug.log
-testem.log
-typings/
-.angular/
-
-# e2e
-e2e/*.js
-e2e/*.map
-
-# System Files
-.DS_Store/
-
-### Ionic3 ###
-# Log an tmp data
 *~
 *.sw[mnpcod]
+.tmp
 *.tmp
 *.tmp.*
+UserInterfaceState.xcuserstate
+$RECYCLE.BIN/
+
+*.log
 log.txt
 
-# NPM (Node Package Manager) files
-npm-debug.log*
-temp/
 
-# Preprocessors cache files
-.sourcemaps/
-.tmp/
-hooks/
+/.sourcemaps
+/.versions
+/coverage
 
-# Ionic 3 plugins files
-platforms/
-plugins/
-plugins/android.json
-plugins/ios.json
-www/
+# Ionic
+/.ionic
+/www
+/platforms
+/plugins
 
-# Trash data
-$RECYCLE.BIN/
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+
+# Miscellaneous
+/.angular
+/.angular/cache
+.sass-cache/
+/.nx
+/.nx/cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+vscode
+/.vscode
+
+# System files
 .DS_Store
 Thumbs.db
-UserInterfaceState.xcuserstate
-
-# End of https://www.toptal.com/developers/gitignore/api/angular,android,ionic3

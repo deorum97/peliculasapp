@@ -1,0 +1,38 @@
+.home-content {
+  background-color: #f0f0f0; /* fondo claro */
+  min-height: 100%;
+}
+/**ion-item::part(native) {
+  //WRITE ALL YOUR CSS RULES HERE
+  padding-left: unset;
+  // and lots more 
+}**/
+
+ion-card {
+  margin-bottom: 15px;
+}
+ion-list {
+  background-color: transparent;
+}
+ion-item.pelicula-item {
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+ion-label h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+ion-label p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+ion-button {
+  --padding-start: 15px;
+  --padding-end: 15px;
+}
